@@ -29,7 +29,7 @@ const ToastItem = (props) => {
           clearTimeout(timerID);
           removeItem();
         });
-      }, duration || 1500);
+      },item?.duration|| duration || 1500);
     });
   }, []);
   return (
