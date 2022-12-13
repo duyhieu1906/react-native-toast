@@ -9,10 +9,11 @@ function broadcast() {
 const ToastService = {
   get: () => data,
 
-  set: async (newData) => {
+  set: async (newData={}) => {
     data.message = newData.message;
     data.position = !!newData.position ? newData.position : "bottom";
     data.style = newData.style;
+    data.duration = newData.duration
     broadcast();
   },
 
