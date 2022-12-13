@@ -10,7 +10,7 @@ import { ToastService } from "./ToastService";
 
 const ToastItem = (props) => {
   const { style, textStyle, duration } = props.data;
-  const { message, removeItem,item } = props;
+  const { message, removeItem, item } = props;
   const animateOpacityValue = useRef(new Animated.Value(0));
   const refItem = useRef();
 
@@ -29,7 +29,7 @@ const ToastItem = (props) => {
           clearTimeout(timerID);
           removeItem();
         });
-      },item?.duration|| duration || 1500);
+      }, item?.duration || duration || 1500);
     });
   }, []);
   return (
